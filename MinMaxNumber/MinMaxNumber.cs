@@ -5,7 +5,7 @@ namespace MinMaxNumberNamespace
 {
 	public class MinMaxNumber
 	{
-		public static String smallestNumber(String str)
+		public static string smallestNumber(String str)
 		{
 			char[] numbers = str.ToCharArray();
 
@@ -38,8 +38,12 @@ namespace MinMaxNumberNamespace
 					numbers[smallestRightmostIndex] = temp;
 				}
 			}
+			else
+			{
 
-			return (new String(numbers));
+			}
+
+			return (new string(numbers));
 		}
 
 		public static void Main()

@@ -4,7 +4,7 @@ using MinMaxNumberNamespace;
 namespace TestMinMaxNumber
 {
 	[TestClass]
-	public class TestMinMaxNumber
+	public class TestMinMaxNumberWithoutZero
 	{
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers0()
