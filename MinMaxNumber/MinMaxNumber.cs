@@ -103,10 +103,55 @@ namespace MinMaxNumberNamespace
 			return (new string(numbers));
 		}
 
+		public static string biggestNumber(String str)
+		{
+			char[] numbers = str.ToCharArray();
+
+			char biggestNumber = '1';
+			int biggestIndex = 0;
+			for (int i = 0; i < numbers.Length; i++)
+			{
+				if (numbers[i] > biggestNumber)
+				{
+					biggestNumber = numbers[i];
+					biggestIndex = i;
+				}
+			}
+
+			if (biggestIndex != 0)
+			{
+				char temp = numbers[0];
+				numbers[0] = numbers[biggestIndex];
+				numbers[biggestIndex] = temp;
+			}
+			else
+			{
+				for (int i = 1; i < numbers.Length; i++)
+				{
+					char biggestNumberRight = numbers[i];
+					int biggestIndexRight = i;
+					for (int j = i + 1; j < numbers.Length; j++)
+					{
+						if (numbers[j] > biggestNumberRight)
+						{
+							char temp = numbers[biggestIndexRight];
+							numbers[biggestIndexRight] = numbers[j];
+							numbers[j] = temp;
+
+							return (new string(numbers));
+						}
+					}
+				}
+			}
+
+			return (new string(numbers));
+		}
+
 		public static void Main()
 		{
-			String num = "11421";
-			Console.Write("Smallest number: " + smallestNumber(num));
+			String num = "75632";
+			Console.WriteLine("Smallest number: " + smallestNumber(num));
+			Console.WriteLine("Biggest number: " + biggestNumber(num));
 		}
 	}
 }

@@ -4,119 +4,116 @@ using MinMaxNumberNamespace;
 namespace TestMinMaxNumber
 {
 	[TestClass]
-	public class TestMinMaxNumberWithoutZero
+	public class TestMaxNumber
 	{
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers0()
 		{
 			//Arrange
-			string res = MinMaxNumber.smallestNumber("1");
+			string res = MinMaxNumber.biggestNumber("10");
 
 			//Assert
-			Assert.AreEqual("1", res);
+			Assert.AreEqual("10", res);
 		}
 
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers1()
 		{
 			//Arrange
-			string res = MinMaxNumber.smallestNumber("11");
+			string res = MinMaxNumber.biggestNumber("100");
 
 			//Assert
-			Assert.AreEqual("11", res);
+			Assert.AreEqual("100", res);
 		}
 
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers2()
 		{
 			//Arrange
-			string res = MinMaxNumber.smallestNumber("112");
+			string res = MinMaxNumber.biggestNumber("101");
 
 			//Assert
-			Assert.AreEqual("112", res);
+			Assert.AreEqual("110", res);
 		}
 
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers3()
 		{
 			//Arrange
-			string res = MinMaxNumber.smallestNumber("1234");
-
+			string res = MinMaxNumber.biggestNumber("1000001");
 
 			//Assert
-			Assert.AreEqual("1234", res);
+			Assert.AreEqual("1100000", res);
 		}
 
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers4()
 		{
 			//Arrange
-			string res = MinMaxNumber.smallestNumber("4321");
-
+			string res = MinMaxNumber.biggestNumber("10002");
 
 			//Assert
-			Assert.AreEqual("1324", res);
+			Assert.AreEqual("20001", res);
 		}
 
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers5()
 		{
 			//Arrange
-			string res = MinMaxNumber.smallestNumber("121");
+			string res = MinMaxNumber.biggestNumber("123456");
 
 			//Assert
-			Assert.AreEqual("112", res);
+			Assert.AreEqual("623451", res);
 		}
 
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers6()
 		{
 			//Arrange
-			string res = MinMaxNumber.smallestNumber("5678");
-
+			string res = MinMaxNumber.biggestNumber("654321");
 
 			//Assert
-			Assert.AreEqual("5678", res);
+			Assert.AreEqual("654321", res);
 		}
 
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers7()
 		{
 			//Arrange
-			string res = MinMaxNumber.smallestNumber("9999999");
+			string res = MinMaxNumber.biggestNumber("756");
 
 			//Assert
-			Assert.AreEqual("9999999", res);
+			Assert.AreEqual("765", res);
 		}
 
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers8()
 		{
 			//Arrange
-			string res = MinMaxNumber.smallestNumber("9998999");
+			string res = MinMaxNumber.biggestNumber("86412");
 
 			//Assert
-			Assert.AreEqual("8999999", res);
+			Assert.AreEqual("86421", res);
 		}
 
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers9()
 		{
 			//Arrange
-			string res = MinMaxNumber.smallestNumber("963521114586");
+			string res = MinMaxNumber.biggestNumber("3201");
 
 			//Assert
-			Assert.AreEqual("163521194586", res);
+			Assert.AreEqual("3210", res);
 		}
 
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers10()
 		{
 			//Arrange
-			string res = MinMaxNumber.smallestNumber("22225113");
+			string res = MinMaxNumber.biggestNumber("32000001");
 
 			//Assert
-			Assert.AreEqual("12225123", res);
+			Assert.AreEqual("32100000", res);
 		}
 	}
 }
