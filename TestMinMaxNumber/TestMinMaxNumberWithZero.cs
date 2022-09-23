@@ -69,7 +69,7 @@ namespace TestMinMaxNumber
 		[TestMethod]
 		public void ShouldReturnMixAndMaxFromGivenNumbers6()
 		{
-			//Arrange
+			//Arranges
 			string res = MinMaxNumber.smallestNumber("678506");
 
 			//Assert
@@ -83,7 +83,7 @@ namespace TestMinMaxNumber
 			string res = MinMaxNumber.smallestNumber("456000789");
 
 			//Assert
-			Assert.AreEqual("406004789", res);
+			Assert.AreEqual("406005789", res);
 		}
 
 		[TestMethod]
@@ -105,13 +105,105 @@ namespace TestMinMaxNumber
 			//Assert
 			Assert.AreEqual("40687889", res);
 		}
+
+		[TestMethod]
+		public void ShouldReturnMixAndMaxFromGivenNumbers10()
+		{
+			//Arrange
+			string res = MinMaxNumber.smallestNumber("1000");
+
+			//Assert
+			Assert.AreEqual("1000", res);
+		}
+
+		[TestMethod]
+		public void ShouldReturnMixAndMaxFromGivenNumbers11()
+		{
+			//Arrange
+			string res = MinMaxNumber.smallestNumber("1020");
+
+			//Assert
+			Assert.AreEqual("1002", res);
+		}
+
+		[TestMethod]
+		public void ShouldReturnMixAndMaxFromGivenNumbers12()
+		{
+			//Arrange
+			string res = MinMaxNumber.smallestNumber("2010");
+
+			//Assert
+			Assert.AreEqual("1020", res);
+		}
+
+		[TestMethod]
+		public void ShouldReturnMixAndMaxFromGivenNumbers13()
+		{
+			//Arrange
+			string res = MinMaxNumber.smallestNumber("20010");
+
+			//Assert
+			Assert.AreEqual("10020", res);
+		}
+
+		[TestMethod]
+		public void ShouldReturnMixAndMaxFromGivenNumbers14()
+		{
+			//Arrange
+			string res = MinMaxNumber.smallestNumber("2100");
+
+			//Assert
+			Assert.AreEqual("1200", res);
+		}
+
+		[TestMethod]
+		public void ShouldReturnMixAndMaxFromGivenNumbers15()
+		{
+			//Arrange
+			string res = MinMaxNumber.smallestNumber("567089");
+
+			//Assert
+			Assert.AreEqual("507689", res);
+		}
+
+		[TestMethod]
+		public void ShouldReturnMixAndMaxFromGivenNumbers16()
+		{
+			//Arrange
+			string res = MinMaxNumber.smallestNumber("76505");
+
+			//Assert
+			Assert.AreEqual("56507", res);
+		}
+
+		[TestMethod]
+		public void ShouldReturnMixAndMaxFromGivenNumbers17()
+		{
+			//Arrange
+			string res = MinMaxNumber.smallestNumber("356021");
+
+			//Assert
+			Assert.AreEqual("156023", res);
+		}
+
+		[TestMethod]
+		public void ShouldReturnMixAndMaxFromGivenNumbers18()
+		{
+			//Arrange
+			string res = MinMaxNumber.smallestNumber("10325");
+
+			//Assert
+			Assert.AreEqual("10235", res);
+		}
+
+		[TestMethod]
+		public void ShouldReturnMixAndMaxFromGivenNumbers19()
+		{
+			//Arrange
+			string res = MinMaxNumber.smallestNumber("10020");
+
+			//Assert
+			Assert.AreEqual("10002", res);
+		}
 	}
 }
-
-//1000 1020 2010 2100 2010 2100 567089 76505 356021 10325 1020 
-//1000 1002 1020 1200 1020 1200 507689 56507 156023 10235 1002
-
-//zemi ja najmalata brojka shto ne e nula. shiftaj ja levo
-//ako taa e vekje najlevo, togash shiftaj ja najdesnata nula najlevo
-//ako vekje ima nula do najlevata i najmalata brojka, togash baraj dali ima druga nula desno od niv za da ja zalepis do niv
-//ako nema druga nula, togash baraj ja najmalata brojka osven niv za da ja zalepis do niv
